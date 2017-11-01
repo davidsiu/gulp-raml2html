@@ -20,7 +20,9 @@
     "gulp"
   ],
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -32,10 +34,12 @@
   "dependencies": {
     "gulp-util": "^3.0.3",
     "raml2html": "2.0.2",
-    "through2": "^0.6.3"
+    "through2": "^0.6.3",
+    "snyk": "^1.47.0"
   },
   "devDependencies": {
     "chai": "^2.2.0",
     "mocha": "^2.2.1"
-  }
+  },
+  "snyk": true
 }
